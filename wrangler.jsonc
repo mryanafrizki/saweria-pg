@@ -1,28 +1,24 @@
 {
-	"name": "aiserve-saweria",
+	"name": "proxy-saweria-workers",
 	"main": "src/index.ts",
 	"compatibility_date": "2025-04-18",
 	"compatibility_flags": [
 		"nodejs_compat"
 	],
-	// D1 Database binding
 	"d1_databases": [
 		{
 			"binding": "DB",
-			"database_name": "aiserve-db",
-			"database_id": "047033ed-65bd-41cb-acaf-14d563f42182"
+			"database_name": "cobain-pay-db",
+			"database_id": "41cb0c71-2cfa-4f27-a72c-d023d63ea84f"
 		}
 	],
-	// Cron trigger: poll pending payments every 1 minute
 	"triggers": {
 		"crons": [
 			"* * * * *"
 		]
 	},
-	// ADMIN_API_KEY set via: wrangler secret put ADMIN_API_KEY
-	// PROXY_URL and PROXY_SECRET set after Dokploy deploy
 	"vars": {
-		"PROXY_URL": "http://saweriapg-saweriapg-m1adbk-a3bcd4-159-65-129-218.traefik.me/",
-		"PROXY_SECRET": "spx_saweria_proxy_2026_secret"
+		"PROXY_URL": "https://proxy-pay-v1.cobain.dev",
+		"PROXY_SECRET": "852207b56f4a3c529729cbf1d64e39cd"
 	}
 }
